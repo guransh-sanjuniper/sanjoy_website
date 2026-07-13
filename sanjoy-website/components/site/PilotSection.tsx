@@ -118,7 +118,7 @@ export function PilotSection() {
           <h2 id="pilot-heading" className="text-heading-xl">
             Start Small. Scale with Confidence.
           </h2>
-          <p className="mt-6 text-body-lg">
+          <p className="mt-6 text-body-lg max-md:mt-4">
             Experience the impact of Enterprise AI through a structured 45-Day
             Zero-Risk Pilot before committing to a full rollout.
           </p>
@@ -133,11 +133,11 @@ export function PilotSection() {
 
           {/* Mobile vertical connector */}
           <div
-            className="pointer-events-none absolute bottom-8 left-5 top-5 z-0 w-px bg-border md:hidden"
+            className="pointer-events-none absolute bottom-8 left-5 top-5 z-0 w-px bg-border max-md:left-[1.375rem] md:hidden"
             aria-hidden="true"
           />
 
-          <ol className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-5 xl:gap-6">
+          <ol className="relative grid grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-5 xl:gap-6">
             {milestones.map((milestone, index) => (
               <MilestoneItem
                 key={milestone.step}
@@ -150,7 +150,7 @@ export function PilotSection() {
         </div>
 
         <motion.div
-          className="section-content-gap rounded-3xl border border-border bg-surface-subtle p-6 shadow-xs sm:p-8 lg:p-10"
+          className="section-content-gap rounded-3xl border border-border bg-surface-subtle p-6 shadow-xs max-md:p-5 sm:p-8 lg:p-10"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-8% 0px -8% 0px" }}
@@ -161,7 +161,7 @@ export function PilotSection() {
           }}
         >
           <div className="mx-auto max-w-3xl text-center">
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] text-foreground sm:text-3xl">
+            <h3 className="text-2xl font-semibold tracking-[-0.04em] text-foreground max-md:text-xl sm:text-3xl">
               45-Day Zero-Risk Pilot
             </h3>
             <p className="mt-4 text-body">
@@ -191,7 +191,7 @@ export function PilotSection() {
                 href={discoveryHref}
                 className={cn(
                   buttonVariants({ variant: "default", size: "lg" }),
-                  "w-full rounded-2xl px-5 sm:w-auto"
+                  "w-full rounded-2xl px-5 max-md:h-11 max-md:px-4 max-md:text-[0.9375rem] sm:w-auto"
                 )}
               >
                 Book a Discovery Session
@@ -202,7 +202,7 @@ export function PilotSection() {
         </motion.div>
 
         <motion.p
-          className="section-content-gap mx-auto max-w-2xl text-center text-xl font-semibold tracking-[-0.035em] text-foreground sm:text-2xl"
+          className="section-content-gap mx-auto max-w-2xl text-center text-xl font-semibold tracking-[-0.035em] text-foreground max-md:text-lg sm:text-2xl"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-8% 0px -8% 0px" }}

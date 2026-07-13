@@ -148,18 +148,18 @@ function ModulePanel({
 function SanjoyCore({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return (
-      <div className="relative mx-auto w-[13.65rem] shrink-0">
+      <div className="relative mx-auto w-[13.65rem] shrink-0 max-md:w-[10.25rem]">
         <div className="relative aspect-square">
           <div
-            className="absolute inset-[6%] translate-y-[5%] rounded-2xl border border-brand-line/70 bg-brand-muted"
+            className="absolute inset-[6%] translate-y-[5%] rounded-2xl border border-brand-line/70 bg-brand-muted max-md:rounded-xl"
             aria-hidden="true"
           />
-          <div className="absolute inset-0 rounded-2xl border border-border bg-surface-subtle shadow-sm">
-            <div className="flex h-full flex-col items-center justify-center px-4 text-center">
-              <p className="text-2xl font-semibold uppercase tracking-[0.1em] text-foreground">
+          <div className="absolute inset-0 rounded-2xl border border-border bg-surface-subtle shadow-sm max-md:rounded-xl">
+            <div className="flex h-full flex-col items-center justify-center px-4 text-center max-md:px-3">
+              <p className="text-2xl font-semibold uppercase tracking-[0.1em] text-foreground max-md:text-xl">
                 Sanjoy
               </p>
-              <p className="mt-2 text-eyebrow leading-relaxed text-brand">
+              <p className="mt-2 text-eyebrow leading-relaxed text-brand max-md:mt-1.5 max-md:text-[0.625rem] max-md:leading-snug max-md:tracking-[0.16em]">
                 Enterprise AI
                 <br />
                 Operating Layer
@@ -213,7 +213,7 @@ function MobileCapabilityCard({
 }) {
   return (
     <motion.div
-      className="w-[10.75rem] shrink-0 rounded-2xl border border-border bg-surface-subtle p-5 shadow-sm"
+      className="w-[10.75rem] shrink-0 rounded-2xl border border-border bg-surface-subtle p-5 shadow-sm max-md:w-[8.125rem] max-md:p-3"
       initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{
@@ -222,14 +222,14 @@ function MobileCapabilityCard({
         ease: [0.2, 0.8, 0.2, 1],
       }}
     >
-      <div className="flex flex-col items-center gap-3 text-center">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-muted text-foreground">
-          <Icon className="h-5 w-5" aria-hidden="true" />
+      <div className="flex flex-col items-center gap-3 text-center max-md:gap-2">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-muted text-foreground max-md:h-8 max-md:w-8">
+          <Icon className="h-5 w-5 max-md:h-4 max-md:w-4" aria-hidden="true" />
         </span>
-        <p className="text-lg font-semibold tracking-[-0.03em] text-foreground">
+        <p className="text-lg font-semibold tracking-[-0.03em] text-foreground max-md:text-sm">
           {title}
         </p>
-        <p className="text-body text-pretty">{detail}</p>
+        <p className="text-body text-pretty max-md:text-xs max-md:leading-5">{detail}</p>
       </div>
     </motion.div>
   )
@@ -245,25 +245,25 @@ function MobileHeroDiagram({
 
   return (
     <motion.figure
-      className="relative mx-auto my-8 w-full max-w-[360px] px-2 md:hidden"
+      className="relative mx-auto my-8 w-full max-w-[360px] px-2 max-md:my-2 max-md:max-w-[17.5rem] max-md:px-0 md:hidden"
       aria-label={ariaLabel}
       initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
     >
       <div
-        className="absolute inset-x-4 inset-y-6 -z-10 rounded-3xl bg-[radial-gradient(circle_at_50%_50%,var(--brand-muted),transparent_72%)] opacity-50"
+        className="absolute inset-x-4 inset-y-6 -z-10 rounded-3xl bg-[radial-gradient(circle_at_50%_50%,var(--brand-muted),transparent_72%)] opacity-50 max-md:inset-x-2 max-md:inset-y-3 max-md:rounded-2xl"
         aria-hidden="true"
       />
 
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 max-md:gap-2.5">
         <MobileCapabilityCard
           {...sales}
           index={0}
           shouldReduceMotion={shouldReduceMotion}
         />
 
-        <div className="flex items-start justify-center gap-4">
+        <div className="grid w-full max-w-[17rem] grid-cols-2 justify-items-center gap-x-2 gap-y-0 max-md:max-w-[17.5rem] max-md:gap-x-2">
           <MobileCapabilityCard
             {...leadership}
             index={1}
@@ -277,7 +277,7 @@ function MobileHeroDiagram({
         </div>
 
         <motion.div
-          className="py-2"
+          className="py-2 max-md:py-1"
           initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.96 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
           transition={{
@@ -289,7 +289,7 @@ function MobileHeroDiagram({
           <SanjoyCore compact />
         </motion.div>
 
-        <div className="flex items-start justify-center gap-4">
+        <div className="grid w-full max-w-[17rem] grid-cols-2 justify-items-center gap-x-2 gap-y-0 max-md:max-w-[17.5rem] max-md:gap-x-2">
           <MobileCapabilityCard
             {...operations}
             index={3}

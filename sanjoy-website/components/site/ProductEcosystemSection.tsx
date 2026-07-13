@@ -225,7 +225,7 @@ export function ProductEcosystemSection() {
           <h2 id="product-ecosystem-heading" className="text-heading-xl">
             One Platform. Five Intelligent Systems.
           </h2>
-          <p className="mt-6 text-body-lg">
+          <p className="mt-6 text-body-lg max-md:mt-4">
             Each product solves a specific business challenge while working
             together as one ecosystem.
           </p>
@@ -234,7 +234,7 @@ export function ProductEcosystemSection() {
         <div className="section-content-gap relative">
           <EcosystemConnectionLine />
 
-          <ul className="relative grid grid-cols-1 gap-5 md:grid-cols-6 lg:grid-cols-5 lg:gap-4 xl:gap-6">
+          <ul className="relative grid grid-cols-1 gap-5 max-md:mx-auto max-md:max-w-none max-md:gap-4 md:grid-cols-6 lg:grid-cols-5 lg:gap-4 xl:gap-6">
             {products.map((product, index) => (
               <ProductCard
                 key={product.name}

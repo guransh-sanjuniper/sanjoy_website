@@ -25,7 +25,7 @@ export function flipCardTopLineClassName(isActive: boolean) {
 
 export function flipCardDefaultLayerClassName(isActive: boolean) {
   return cn(
-    "relative z-10 flex min-h-[11.5rem] flex-col p-5 transition-opacity duration-300 sm:min-h-[12rem] sm:p-6",
+    "relative z-10 flex min-h-[11.5rem] flex-col p-5 transition-opacity duration-300 max-md:min-h-[10.5rem] max-md:p-5 sm:min-h-[12rem] sm:p-6",
     "[@media(hover:hover)_and_(pointer:fine)]:md:group-hover:opacity-0 [@media(hover:hover)_and_(pointer:fine)]:md:group-focus-within:opacity-0",
     isActive && "opacity-0"
   )

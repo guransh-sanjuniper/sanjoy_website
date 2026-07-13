@@ -25,7 +25,7 @@ export function HeroActions() {
 
   return (
     <motion.div
-      className="flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
+      className="flex w-full flex-col items-center justify-center gap-3 max-md:max-w-[20rem] md:w-auto md:flex-row"
       initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.15, ease: [0.2, 0.8, 0.2, 1] }}
@@ -36,7 +36,7 @@ export function HeroActions() {
           href={action.href}
           className={cn(
             buttonVariants({ variant: action.variant, size: "lg" }),
-            "w-full rounded-2xl px-5 sm:w-auto"
+            "w-full rounded-2xl px-5 max-md:h-11 max-md:px-4 max-md:text-[0.9375rem] md:w-auto"
           )}
         >
           {action.label}

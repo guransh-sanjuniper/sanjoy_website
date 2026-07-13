@@ -413,6 +413,30 @@
     );
   }
 
+  /* Mobile-first homepage rhythm — below md (768px) only. */
+  @media (max-width: 47.9375rem) {
+    :root {
+      --space-gutter: 1.25rem;
+      --space-section-sm: 2rem;
+      --space-section: 2.75rem;
+      --space-section-lg: 3.25rem;
+      --space-section-content: 1.75rem;
+      --space-hero-gap: 1.75rem;
+    }
+
+    .text-heading-xl {
+      @apply text-[1.625rem] leading-[1.1] tracking-[-0.045em];
+    }
+
+    .text-body-lg {
+      @apply text-base leading-7;
+    }
+
+    .section-content-gap {
+      margin-top: 1.75rem;
+    }
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     .hero-ambient-glow--primary {
       animation: hero-ambient-drift-primary 16s ease-in-out infinite;

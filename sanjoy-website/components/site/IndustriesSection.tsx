@@ -207,12 +207,12 @@ export function IndustriesSection() {
           <h2 id="industries-heading" className="text-heading-xl">
             Built For Every Enterprise.
           </h2>
-          <p className="mt-6 text-body-lg">
+          <p className="mt-6 text-body-lg max-md:mt-4">
             One platform. Adapted to every industry.
           </p>
         </motion.header>
 
-        <ul className="section-content-gap grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <ul className="section-content-gap grid grid-cols-1 gap-5 max-md:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {industries.map((industry, index) => (
             <IndustryTile
               key={industry.name}

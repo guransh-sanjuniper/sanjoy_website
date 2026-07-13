@@ -76,7 +76,7 @@ function ChallengeCard({
         ease: [0.2, 0.8, 0.2, 1],
       }}
     >
-      <article className="group relative h-full rounded-2xl border border-border bg-surface p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md sm:p-7">
+      <article className="group relative h-full rounded-2xl border border-border bg-surface p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md max-md:p-5 sm:p-7">
         <span
           className="absolute inset-x-6 top-0 h-px origin-left scale-x-0 bg-brand transition-transform duration-300 group-hover:scale-x-100"
           aria-hidden="true"
@@ -115,7 +115,7 @@ export function BusinessChallenges() {
           </h2>
         </motion.header>
 
-        <ul className="section-content-gap grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-7">
+        <ul className="section-content-gap grid grid-cols-1 gap-5 max-md:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-7">
           {challenges.map((challenge, index) => (
             <ChallengeCard
               key={challenge.title}

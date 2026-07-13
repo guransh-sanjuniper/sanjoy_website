@@ -27,16 +27,16 @@ export function FinalCTASection() {
           <h2 id="final-cta-heading" className="text-heading-xl">
             Ready to Build an AI-Powered Enterprise?
           </h2>
-          <p className="mt-6 text-body-lg">
+          <p className="mt-6 text-body-lg max-md:mt-4">
             Transform every department with one intelligent operating layer.
           </p>
 
-          <div className="mt-10 flex w-full justify-center">
+          <div className="mt-10 flex w-full justify-center max-md:mt-7">
             <a
               href={discoveryHref}
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
-                "w-full rounded-2xl px-5 sm:w-auto"
+                "w-full rounded-2xl px-5 max-md:h-11 max-md:px-4 max-md:text-[0.9375rem] sm:w-auto"
               )}
             >
               Book Discovery Session

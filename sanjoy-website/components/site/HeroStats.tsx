@@ -14,7 +14,7 @@ export function HeroStats() {
 
   return (
     <motion.ul
-      className="flex flex-col items-start gap-4 text-sm font-semibold tracking-[-0.02em] text-foreground sm:flex-row sm:items-center sm:justify-center sm:gap-0 lg:justify-start"
+      className="flex flex-col items-center gap-4 text-sm font-semibold tracking-[-0.02em] text-foreground max-md:w-full max-md:max-w-[20rem] max-md:gap-3 md:flex-row md:items-center md:justify-center md:gap-0 lg:justify-start"
       initial={shouldReduceMotion ? false : "hidden"}
       animate={shouldReduceMotion ? undefined : "visible"}
       variants={{
@@ -34,7 +34,7 @@ export function HeroStats() {
         return (
         <motion.li
           key={outcome.label}
-          className="flex items-center gap-3 text-foreground"
+          className="flex items-center gap-3 text-foreground max-md:w-full max-md:justify-center"
           variants={{
             hidden: { opacity: 0, y: 10 },
             visible: { opacity: 1, y: 0 },
@@ -43,14 +43,16 @@ export function HeroStats() {
         >
           {index > 0 ? (
             <span
-              className="hidden h-10 w-px bg-border sm:mx-5 sm:block"
+              className="hidden h-10 w-px bg-border md:mx-5 md:block"
               aria-hidden="true"
             />
           ) : null}
-          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-muted text-brand">
-            <Icon className="h-4 w-4" aria-hidden="true" />
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-muted text-brand max-md:h-9 max-md:w-9">
+            <Icon className="h-4 w-4 max-md:h-3.5 max-md:w-3.5" aria-hidden="true" />
           </span>
-          <span className="max-w-[6.5rem] leading-5">{outcome.label}</span>
+          <span className="max-w-[6.5rem] leading-5 max-md:max-w-none max-md:text-[0.8125rem] max-md:leading-4">
+            {outcome.label}
+          </span>
         </motion.li>
         )
       })}
