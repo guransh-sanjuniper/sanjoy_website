@@ -144,7 +144,7 @@ function ProductCard({
               width={320}
               height={96}
               loading="lazy"
-              className="h-20 w-auto max-w-[19rem] object-contain object-left"
+              className="h-20 w-44 max-w-full object-contain object-center"
             />
           </div>
 

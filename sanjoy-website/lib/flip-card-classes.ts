@@ -52,5 +52,5 @@ export function flipCardMobilePanelClassName() {
 }
 
 export function flipCardLogoClassName() {
-  return "flex h-24 items-center transition-transform duration-300 [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.02]"
+  return "flex h-24 w-full items-center justify-center transition-transform duration-300 [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.02]"
 }
