@@ -245,11 +245,12 @@ function MobileHeroDiagram({
 
   return (
     <motion.figure
-      className="relative mx-auto my-8 w-full max-w-[360px] px-2 max-md:my-2 max-md:max-w-[17.5rem] max-md:px-0 md:hidden"
+      className="relative mx-auto w-full max-w-[360px] px-2 max-md:my-0 max-md:max-w-[17.5rem] max-md:px-0 md:hidden"
       aria-label={ariaLabel}
-      initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-      animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-8% 0px -4% 0px" }}
+      transition={{ duration: 0.75, ease: [0.2, 0.8, 0.2, 1] }}
     >
       <div
         className="absolute inset-x-4 inset-y-6 -z-10 rounded-3xl bg-[radial-gradient(circle_at_50%_50%,var(--brand-muted),transparent_72%)] opacity-50 max-md:inset-x-2 max-md:inset-y-3 max-md:rounded-2xl"

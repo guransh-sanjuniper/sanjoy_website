@@ -13,7 +13,7 @@ const productLinks = [...productNavigation]
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/sanjoy",
+    href: "https://in.linkedin.com/company/sanjuniper",
   },
 ]
 

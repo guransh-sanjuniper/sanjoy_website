@@ -104,7 +104,7 @@ export function Navbar() {
         className="container-page relative z-10 flex h-full items-center justify-between"
         aria-label="Main navigation"
       >
-        <SanjoyLogo priority className="h-20" />
+        <SanjoyLogo priority className="h-20 max-md:h-[4.375rem]" />
 
         <div className="hidden items-center gap-10 lg:flex">
           {navigationItems.map((item) => {

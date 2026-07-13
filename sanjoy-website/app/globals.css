@@ -421,7 +421,7 @@
       --space-section: 2.75rem;
       --space-section-lg: 3.25rem;
       --space-section-content: 1.75rem;
-      --space-hero-gap: 1.75rem;
+      --space-hero-gap: 4rem;
     }
 
     .text-heading-xl {
