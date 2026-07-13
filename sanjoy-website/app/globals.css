@@ -85,8 +85,8 @@
   --breakpoint-xs: 30rem;
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
+  --breakpoint-lg: 85.5rem;
+  --breakpoint-xl: 90rem;
   --breakpoint-2xl: 96rem;
 
   --animate-fade-in: fade-in 0.7s ease-out both;

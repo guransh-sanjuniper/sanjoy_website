@@ -77,7 +77,7 @@ export function Navbar() {
   }, [isMenuOpen])
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 64rem)")
+    const mediaQuery = window.matchMedia("(min-width: 85.5rem)")
 
     const handleViewportChange = (event: MediaQueryListEvent) => {
       if (event.matches) {
